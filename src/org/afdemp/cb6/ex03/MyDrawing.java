@@ -39,8 +39,7 @@ public class MyDrawing extends Drawing {
         for(Line line : lines){
             InnerSelectableLine l = (InnerSelectableLine) line;
             if (l.isSelected){
-                minX = getMinX(minX, l.getFirstPoint());
-                minX = getMinX(minX, l.getSecondPoint());
+                minX = getMinX(minX, l);                
                 selectedLines.add(l);
             }
         }
@@ -58,9 +57,10 @@ public class MyDrawing extends Drawing {
     void alignSelectedLinesToTheRight() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
- 
-    private static int getMinX(int x, Point p){
-        return Math.min(x, p.getX());
+    
+    private static int getMinX(int x, Line l) {
+        int m = Math.min(x, l.getFirstPoint().getX());
+        return Math.min(m, l.getSecondPoint().getX());
     }
     
     private static class InnerSelectableLine extends Line {
