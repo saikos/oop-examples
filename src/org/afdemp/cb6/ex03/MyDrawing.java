@@ -46,7 +46,11 @@ public class MyDrawing extends Drawing {
         }
         
         for (InnerSelectableLine line : selectedLines) {            
-            
+            Point f = line.getFirstPoint();
+            Point s = line.getSecondPoint();            
+            int dist = Math.abs(f.getX() - s.getX());
+            f.setX(minX);
+            s.setX(minX + dist);
         }
     }
 
