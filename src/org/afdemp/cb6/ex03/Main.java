@@ -16,26 +16,24 @@ public class Main {
     public static void main(String[] args) {
         
         //Default values        
-        //demoDefaultValues();                
+        demoDefaultValues();                
         
         //Shadowing        
-        //demoShadowing();
+        demoShadowing();
         
                 
         //Line, point, method overloading                
-        //demoMethodOverloading();
+        demoMethodOverloading();
         
         //Type polymorphism (X is-a Y)         
-        //demoIsA();
+        demoIsA();
                                
         //Interfaces and abstract classes         
         //demoAbstractClasses();
         demoInterfaces();
-        
-        /*
+                
         //Down-casting
-        demoDownCasting();
-        */
+        demoDownCasting();        
     }
     
     private static void demoDefaultValues() {
