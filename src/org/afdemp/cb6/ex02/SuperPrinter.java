@@ -13,12 +13,12 @@ public class SuperPrinter extends Printer {
     }
 
     @Override
-    public void print(String message) {
+    public void print(String message) throws PrinterNotEnabledException {
         if (enabled) {
             super.print(message);
         }
         else {
-            throw new RuntimeException("The printer is not enabled");
+            throw new PrinterNotEnabledException("The printer is not enabled");
         }
     }
 }
